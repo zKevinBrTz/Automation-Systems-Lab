@@ -1,31 +1,32 @@
+
+---
+
+# 📁 🧠 2. docs/arquitetura.md
+
+👉 Explica como o sistema funciona tecnicamente
+
+```md id="d1"
 # 🧠 Arquitetura do Sistema
 
-Este projeto simula um sistema baseado em módulos interligados.
+O sistema é baseado em camadas interligadas:
 
 ---
 
-## 🏗️ Estrutura:
+## 🏗️ Estrutura
 
-### 1. Comandos
-Responsáveis por iniciar ações dentro do sistema.
-
-### 2. Sistema Core
-Processa toda a lógica central e eventos.
-
-### 3. Entidades
-Elementos que executam comportamentos (ex: NPCs).
-
-### 4. Eventos
-Camada que conecta ações e respostas.
+- Comandos → iniciam ações
+- Core → processa lógica
+- Eventos → conectam ações
+- Entidades → executam comportamentos
+- Respostas → retornam resultado
 
 ---
 
-## 🔁 Fluxo geral:
+## 🔁 Fluxo geral
 
-Usuário → Comando → Core → Evento → Entidade → Resposta
-
----
-
-## 💡 Visão:
-
-A arquitetura foi pensada para simular um ambiente vivo, onde tudo reage em tempo real através de lógica programada.
+```mermaid
+flowchart LR
+A[Comando] --> B[Core]
+B --> C[Evento]
+C --> D[Entidade]
+D --> E[Resposta]
